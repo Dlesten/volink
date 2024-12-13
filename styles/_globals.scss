@@ -1,6 +1,9 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 }
+.pahe {
+	position: relative;
+}
 .small-hedden-absolut {
 	@include mobile {
 		display: none;
