@@ -117,7 +117,7 @@
 		&-link {
 			width: 200px;
 			height: 48px;
-
+			transition: 0.5s;
 			@include desktop__small {
 				width: 166px;
 				height: 40px;
@@ -129,6 +129,11 @@
 			@include mobile__small {
 				width: 154px;
 				height: 36px;
+			}
+			@include hover {
+				&:hover {
+					color: var(--color-green);
+				}
 			}
 		}
 	}

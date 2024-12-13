@@ -52,8 +52,22 @@ input {
 		font-size: 40px;
 	}
 }
-.shadow{
+.shadow {
 	padding: 20px 20px 20px 20px;
 	border-radius: 20px;
 	box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.swiper {
+	margin-top: 70px;
+	width: 600px;
+	height: 600px;
+	background-size: cover;
+	@include mobile {
+		width: 550px;
+		height: 550px;
+	}
+	@include mobile__small {
+		width: 320px;
+		height: 320px;
+	}
 }

@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title></title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="css/styles.css" />
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
@@ -62,19 +66,21 @@
 						<div class="header__list-content">
 							<ul class="header__list-block">
 								<li class="header__list-item">
-									<a href="#" class="header__list-link"> Главная </a>
+									<a href="" class="header__list-link"> Главная </a>
 								</li>
 								<li class="header__list-item">
-									<a href="#" class="header__list-link"> О Fabrilic </a>
+									<a href="#info" class="header__list-link"> О Fabrilic </a>
 								</li>
 								<li class="header__list-item">
-									<a href="#" class="header__list-link"> Возможности </a>
+									<a href="#possibilities" class="header__list-link">
+										Возможности
+									</a>
 								</li>
 								<li class="header__list-item">
 									<a href="#" class="header__list-link"> Успехи </a>
 								</li>
 								<li class="header__list-item">
-									<a href="#" class="header__list-link"> Помощь </a>
+									<a href="#help" class="header__list-link"> Помощь </a>
 								</li>
 							</ul>
 							<div class="small-visually"></div>
@@ -96,7 +102,7 @@
 					</h3>
 				</div>
 			</section>
-			<section class="info">
+			<section class="info" id="info">
 				<div class="info__concept">
 					<h2 class="info__title title">О компании Faberlic</h2>
 					<h3 class="info__subtitle">Faberlic - более 25 лет в бизнесе!</h3>
@@ -150,7 +156,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="possibilities">
+			<section class="possibilities" id="possibilities">
 				<div class="possibilities__concept">
 					<h2 class="possibilities__title title">Возможности</h2>
 					<h3 class="possibilities__subtitle">
@@ -273,7 +279,51 @@
 					<button class="join__button">РЕГИСТРАЦИЯ</button>
 				</form>
 			</section>
-			<section class="help">
+			<section class="success">
+				<div class="success__text">
+					<h2 class="success__title title">УСПЕХИ И ДОХОДЫ НАШИХ ПАРТНЁРОВ</h2>
+					<h3 class="success__subtitle">
+						Добро пожаловать в мир возможностей и финансовой независимости с
+						компанией Faberlic. <br class="custom-br" />
+						Наши партнёры ежедневно достигают впечатляющих успехов и получают
+						достойные вознаграждения за свою работу. Ежемесячные доходы от
+						30.000 рублей до 300.000 и выше. <br class="custom-br" />
+						Подробнее узнать о вдохновляющих историях наших успешных партнёров и
+						присоединиться в нашу команду легко. Просто зарегистрируйтесь на
+						нашем сайте и сделайте первый шаг к финансовой свободе и карьерному
+						росту.
+					</h3>
+				</div>
+			</section>
+			<section class="example">
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="images/example/IMG_9250.JPG" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/example/IMG_9251.JPG" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/example/IMG_9252.JPG" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/example/IMG_9253.JPG" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/example/IMG_9254.JPG" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/example/IMG_9255.JPG" alt="" />
+						</div>
+						<div class="swiper-slide">
+							<img src="images/example/IMG_9256.JPG" alt="" />
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+			<section class="help" id="help">
 				<h3 class="help__title title">
 					Нужна помощь? <br />
 					Обращайтесь
@@ -325,6 +375,7 @@
 				</div>
 			</div>
 		</footer>
-		<script src="/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="scripts/main.js"></script>
 	</body>
 </html>
