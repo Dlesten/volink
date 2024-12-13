@@ -560,6 +560,11 @@ input {
   background-image: url(../images/background/oth.png);
   background-size: cover;
 }
+@media (max-width: 575px) {
+  .greetings-group {
+    background-image: url(../images/background/oth__Small.jpg);
+  }
+}
 .greetings__title {
   width: 500px;
   margin: 0 auto;
