@@ -13,9 +13,9 @@
 		width: 80%;
 		text-align: center;
 		gap: 10px;
-        @include mobile__small{
-            font-size: 17px;
-        }
+		@include mobile__small {
+			font-size: 17px;
+		}
 	}
 }
 

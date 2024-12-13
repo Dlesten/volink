@@ -562,7 +562,7 @@ input {
 }
 @media (max-width: 575px) {
   .greetings-group {
-    background-image: url(../images/background/oth__Small.jpg);
+    background-image: url(../../images/background/oth__small.png);
   }
 }
 .greetings__title {
