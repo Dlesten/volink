@@ -5,11 +5,10 @@
 		height: 1100px;
 		background-image: url(../images/background/oth.png);
 		background-size: cover;
-		@include mobile__small {
-			background-image: url(../../images/background/oth__small.png);
-		}
+		// @include mobile__small {
+		// 	background: url(../../images/logo/oth__small.jpg);
+		// }
 	}
-
 	&__title {
 		width: 500px;
 		margin: 0 auto;
@@ -86,5 +85,10 @@
 				padding-left: 110px;
 			}
 		}
+	}
+}
+@media (max-width: 575px) {
+	.greetings-group {
+		background-image: url(../images/background/oth__small.png);
 	}
 }

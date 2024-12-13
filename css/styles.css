@@ -560,11 +560,6 @@ input {
   background-image: url(../images/background/oth.png);
   background-size: cover;
 }
-@media (max-width: 575px) {
-  .greetings-group {
-    background-image: url(../../images/background/oth__small.png);
-  }
-}
 .greetings__title {
   width: 500px;
   margin: 0 auto;
@@ -655,6 +650,11 @@ input {
   }
 }
 
+@media (max-width: 575px) {
+  .greetings-group {
+    background-image: url(../images/background/oth__small.png);
+  }
+}
 .info {
   margin-top: 30px;
   width: 100%;
