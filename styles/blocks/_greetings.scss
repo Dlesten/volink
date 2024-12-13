@@ -1,0 +1,87 @@
+.greetings {
+	width: 100%;
+	&-group {
+		width: 100%;
+		height: 1100px;
+		background-image: url(/images/background/oth.png);
+		background-size: cover;
+	}
+
+	&__title {
+		width: 500px;
+		margin: 0 auto;
+		padding-top: 440px;
+		font-size: 78px;
+		line-height: 1;
+		letter-spacing: 2px;
+		font-weight: 800;
+		text-align: center;
+		color: var(--color-white);
+		text-shadow: 3px 1px 4px rgba(0, 0, 0, 0.39);
+		@include mobile {
+			font-size: 70px;
+			letter-spacing: 2px;
+		}
+		@include mobile__small {
+			width: 70%;
+			font-size: 38px;
+			letter-spacing: 1.5px;
+		}
+	}
+	&__subtitle {
+		width: 1400px;
+		margin: 0 auto;
+		padding-top: 280px;
+		font-size: 40px;
+		text-transform: uppercase;
+		line-height: 1;
+		letter-spacing: 6px;
+		color: var(--color-white);
+		text-shadow: 3px 1px 4px rgba(0, 0, 0, 0.39);
+		@include noyt {
+			font-size: 32px;
+			letter-spacing: 5px;
+			width: 100%;
+
+			&-bottom {
+				padding-left: 660px;
+			}
+		}
+		@include noyt-above {
+			&-bottom {
+				padding-left: 660px;
+			}
+		}
+		@include desktop__small {
+			font-size: 30px;
+			width: 100%;
+			letter-spacing: 4px;
+			margin: 0 auto;
+			&-bottom {
+				padding-left: 460px;
+			}
+		}
+		@include tablet {
+			font-size: 24px;
+			letter-spacing: 3.5px;
+			&-bottom {
+				padding-left: 360px;
+			}
+		}
+
+		@include mobile {
+			font-size: 22px;
+			letter-spacing: 2px;
+			&-bottom {
+				padding-left: 220px;
+			}
+		}
+		@include mobile__small {
+			font-size: 16px;
+			letter-spacing: 1px;
+			&-bottom {
+				padding-left: 110px;
+			}
+		}
+	}
+}

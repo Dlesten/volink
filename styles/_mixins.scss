@@ -1,0 +1,279 @@
+$large-above: 1601px;
+$large: 1600px;
+
+$desktop-above: 1281px;
+$desktop: 1280px;
+
+$desktop__small-above: 1201px;
+$desktop__small: 1200px;
+
+$tablet-above: 991px;
+$tablet: 990px;
+
+$mobile-above: 768px;
+$mobile: 767px;
+
+$mobile__small-above: 576px;
+$mobile__small: 575px;
+
+$least-above: 576px;
+$least: 575px;
+
+$noyt-above: 1321px;
+$noyt: 1320px;
+
+@mixin large-above {
+	@media (min-width: $large-above) {
+		@content;
+	}
+}
+@mixin large {
+	@media (max-width: $large) {
+		@content;
+	}
+}
+@mixin noyt-above {
+	@media (min-width: $noyt-above) {
+		@content;
+	}
+}
+@mixin noyt {
+	@media (max-width: $noyt) {
+		@content;
+	}
+}
+@mixin desktop-above {
+	@media (min-width: $desktop-above) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (max-width: $desktop) {
+		@content;
+	}
+}
+@mixin desktop__small-above {
+	@media (min-width: $desktop__small-above) {
+		@content;
+	}
+}
+@mixin desktop__small {
+	@media (max-width: $desktop__small) {
+		@content;
+	}
+}
+@mixin tablet-above {
+	@media (min-width: $tablet-above) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (max-width: $tablet) {
+		@content;
+	}
+}
+@mixin mobile-above {
+	@media (min-width: $mobile-above) {
+		@content;
+	}
+}
+@mixin mobile {
+	@media (max-width: $mobile) {
+		@content;
+	}
+}
+@mixin mobile__small-above {
+	@media (min-width: $mobile__small-above) {
+		@content;
+	}
+}
+@mixin mobile__small {
+	@media (max-width: $mobile__small) {
+		@content;
+	}
+}
+// ховер
+@mixin hover {
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@content;
+		}
+	}
+}
+
+// Для псевдоклассов
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+// 1. Миксин для центровки элемента по горизонтали
+@mixin center-horizontal($width) {
+	margin: 0 auto;
+	width: $width;
+}
+
+// градиент
+@mixin gradient-bg($color1, $color2) {
+	background: linear-gradient(to right, $color1, $color2);
+}
+
+// анимация появления
+@mixin fade-in {
+	animation: fadeIn 0.5s ease-in;
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+// для gap сетки
+@mixin grid($columns, $gap) {
+	display: grid;
+	grid-template-columns: repeat($columns, 1fr);
+	gap: $gap;
+}
+// flex
+@mixin center-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+// для сетки с высотой фиксированной и автоматическими высотами
+@mixin border-radius($radius: 5px) {
+	border-radius: $radius;
+}
+
+@mixin flexbox-grid($columns: 12, $gap: 10px) {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -($gap / 2);
+
+	> * {
+		flex: 0 0 calc(100% / $columns);
+		padding: $gap / 2;
+	}
+}
+@mixin full-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+}
+@mixin arrow($direction: down, $size: 5px, $color: #000) {
+	width: 0;
+	height: 0;
+	@if $direction == down {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	} @else if $direction == up {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	} @else if $direction == right {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	} @else if $direction == left {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+	}
+}
+// Создает треугольную стрелку указанного направления, размера и цвета
+@mixin rotate($degrees) {
+	transform: rotate($degrees);
+}
+// Поворачивает элемент на указанное количество градусов
+@mixin scale-on-hover($scale: 1.1) {
+	transition: transform 0.3s ease;
+	&:hover {
+		transform: scale($scale);
+	}
+}
+// Увеличивает элемент при наведении курсора
+@mixin hover-underline($color: currentColor, $height: 2px) {
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 100%;
+		height: $height;
+		background-color: $color;
+		transform: scaleX(0);
+		transition: transform 0.3s ease;
+	}
+	&:hover::after {
+		transform: scaleX(1);
+	}
+}
+// Создает эффект подчеркивания при наведении на текст
+@mixin typewriter($steps) {
+	overflow: hidden;
+	border-right: 0.15em solid orange;
+	white-space: nowrap;
+	margin: 0 auto;
+	letter-spacing: 0.15em;
+	animation: typing 3.5s steps($steps, end), blink-caret 0.75s step-end infinite;
+}
+// Создает анимацию печатающегося текста
+
+// Стилизация списка
+// Добавляет стили для списка.
+@mixin list-style {
+	list-style-type: none;
+	padding: 0;
+	li {
+		margin-bottom: 10px;
+	}
+}
+@mixin burger-menu($color: black, $width: 3px, $height: 20px) {
+	position: relative;
+	display: inline-block;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		width: $width;
+		height: $height;
+		background-color: $color;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&:before {
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transform-origin: center bottom;
+	}
+
+	&:after {
+		right: 50%;
+		transform: translate(-50%, 50%);
+		transform-origin: center top;
+	}
+
+	&.active {
+		&:before,
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+}
